@@ -15,7 +15,6 @@ class CreateToolTable extends Migration
     {
         Schema::create('tool', function (Blueprint $table) {
             $table->id();
-            $table->string('content', 20);
             $table->timestamps();
         });
     }

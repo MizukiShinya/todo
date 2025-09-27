@@ -84,7 +84,19 @@
     outline: none;
     border: none;
 }
-.update-form__button{
+.update-form__botton{
+    width: 50px;
+}
+.update-form__button-submit{
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+.delete-form__button{
     width: 50px;
 }
 .delete-form__button-submit{
