@@ -1,7 +1,7 @@
-@extend('layouts.app')
+@extends('layouts.app')
 
 @section('css')
-<linl rel="stylesheet" href="{{ asset('css/index.css')}}">
+<link rel="stylesheet" href="{{ asset('css/index.css')}}">
 @endsection
 
 @section('content')
@@ -15,8 +15,8 @@
         <div class="create-form__item">
             <input class="create-form__item-input" type="text" name="content">
         </div>
-        <div class="create-form__botton">
-            <botton class="create-form__botton-submit" type="submit">作成</botton>
+        <div class="create-form__button">
+            <button class="create-form__button-submit" type="submit">作成</button>
         </div>
     </form>
     <div class="todo-table">
@@ -30,15 +30,15 @@
                         <div class="update-form__item">
                             <input class="update-form__item-input" type="text" name="content" value="test">
                         </div>
-                        <div class="update-form__botton">
-                            <botton class="update-form__botton-submit" type="submit">更新</botton>
+                        <div class="update-form__button">
+                            <button class="update-form__button-submit" type="submit">更新</button>
                         </div>
                     </form>
                 </td>
                 <td class="todo-table__item">
                     <form class="delete-form">
-                        <div class="delete-form__botton">
-                            <botton class="delete-form__botton-submit" type="submit">削除</botton>
+                        <div class="delete-form__button">
+                            <button class="delete-form__button-submit" type="submit">削除</button>
                         </div>
                     </form>
                 </td>
@@ -49,15 +49,15 @@
                         <div class="update-form__item">
                             <input class="update-form__item-input" type="text" name="content" value="test2">
                         </div>
-                        <div class="update-form__botton">
-                            <botton class="update-form__botton-submit" type="submit">更新</botton>
+                        <div class="update-form__button">
+                            <button class="update-form__button-submit" type="submit">更新</button>
                         </div>
                     </form>
                 </td>
                 <td class="todo-table__item">
                     <form class="delete-form">
-                        <div class="delete-form__botton">
-                            <botton class="delete-form__botton-submit" type="submit">削除</botton>
+                        <div class="delete-form__button">
+                            <button class="delete-form__button-submit" type="submit">削除</button>
                         </div>
                     </form>
                 </td>
