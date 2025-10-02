@@ -21,13 +21,22 @@ class TodoController extends Controller
     }
     public function update(TodoRequest $request)
     {
-        $todo=$request->only(['content']);
-        Todo::find($request->id)->update($todo);
+        $todo=Todo::find($request->id);
+
+        if (!$todo){
+            return redirect('/')->with('error', 'Todoが見つかりません');
+        }
+        $todo->update($request->only(['content']));
         return redirect('/')->with('message', 'Todoを更新しました');
     }
     public function destroy(Request $request)
     {
-        Todo::find($request->id)->delete();
+        $todo=Todo::find($request->id);
+
+         if (!$todo){
+            return redirect('/')->with('error', 'Todoが見つかりません');
+        }
+        $todo->delete();
         return redirect('/')->with('message', 'Todoを削除しました');
     }
 }
