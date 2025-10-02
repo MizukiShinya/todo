@@ -55,6 +55,15 @@
                     <form class="delete-form" action="/todos/delete" method="POST">
                         @method('DELETE')
                         @csrf
+                        <script>
+                            document.querySelectorAll('.delete-form').forEach(form => {
+                                form.addEventListener('submit', function(e) {
+                                    if (!confirm('本当に削除しますか？')) {
+                                        e.preventDefault();
+                                    }
+                                });
+                            });
+                        </script>
                         <div class="delete-form__button">
                             <input type="hidden" name="id" value="{{$todo['id']}}">
                             <button class="delete-form__button-submit" type="submit">削除</button>
